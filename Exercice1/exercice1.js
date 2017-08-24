@@ -9,7 +9,8 @@ Partie 1 : compilation
 
 Partie 2 : typage
 1. ajouter un typage par hinting sur l'argument de la fonction
-    le hinting d'argument s'écrit de la sorte : arg: type
+    le hinting d'argument s'écrit de la sorte :
+      arg: type
 2. compiler
 3. observer le code compilé
 
