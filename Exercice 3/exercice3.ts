@@ -6,7 +6,7 @@ message dans la console
 
 */
 
-class personne
+class Personne
 
 /*
 Partie 2
@@ -15,3 +15,5 @@ Ajout un attribut cursus sur l'étudiant prenant dans un énumération
 de votre création
 
 */
+
+class Etudiant
