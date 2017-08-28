@@ -8,67 +8,64 @@ mais tous les types doivent être présent au moins une fois dans vos fonctions
 Vérifier la bonne compilation de vote code, inspecter le code produit et
 soumettre le résultat sur votre dépot github
 */
-
-function testString(a: string): string {
-    let color: string = "blue";
+function testString(a) {
+    var color = "blue";
     console.log('string ' + color);
     return color;
 }
-
-function testNumber(b: number): number {
-    let age: number = 37;
+function testNumber(b) {
+    var age = 37;
     console.log('number : ' + age);
     return age;
 }
-
-function testBool(c: boolean): boolean {
-    let isDone: boolean = false;
+function testBool(c) {
+    var isDone = false;
     console.log('boolean : ' + isDone);
     return isDone;
 }
-
-function testList1(d: number[]): number[] {
-    let list: number[] = [1, 2, 3];
+function testList1(d) {
+    var list = [1, 2, 3];
     console.log('list : ' + list);
     return list;
 }
-
-function testList2(e: Array<number>): Array<number> {
-    let list: Array<number> = [1, 2, 3];
+function testList2(e) {
+    var list = [1, 2, 3];
     console.log('list : ' + list);
     return list;
 }
-function testTuple(f: [string, number]): [string, number] {
-    let x: [string, number] = ['toto', 2];
+function testTuple(f) {
+    var x = ['toto', 2];
     console.log('tuple : ' + x);
     return x;
 }
-function testEnum(): any {
-  enum Color {Red, Green, Blue}
+function testEnum() {
+    var Color;
+    (function (Color) {
+        Color[Color["Red"] = 0] = "Red";
+        Color[Color["Green"] = 1] = "Green";
+        Color[Color["Blue"] = 2] = "Blue";
+    })(Color || (Color = {}));
     console.log('enum : ' + Color.Red);
     return Color.Green;
 }
-function testAny(): any {
-    let myAny: any = 4;
+function testAny() {
+    var myAny = 4;
     console.log('any : ' + myAny);
     return myAny;
 }
-function testVoid(name: string ): void {
-    console.log('bonjour '+ name);
-
+function testVoid(name) {
+    console.log('bonjour ' + name);
 }
 function testNullUndefined() {
-    let und: undefined = undefined;
-    let nul: null = null;
+    var und = undefined;
+    var nul = null;
     console.log('null and undefined : ' + und + nul);
-    
 }
-function anError(message: string): never {
+function anError(message) {
     throw new Error(message);
 }
-
-function aLoop(): never {
+function aLoop() {
     while (true) {
-      console.log('u r in a obvious loop !!  ' )
+        console.log('u r in a obvious loop !!  ');
     }
 }

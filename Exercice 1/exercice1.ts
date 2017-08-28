@@ -21,10 +21,11 @@ Partie 2 : typage
 3. observer le code compilé
 
 */
-function saluer(nom) {
+function saluer(nom: string): string {
     console.log('coucou ' + nom);
     return 'coucou';
 }
+
 function chaineCoucou() {
-    return 'coucou';
+  return 'coucou';
 }
